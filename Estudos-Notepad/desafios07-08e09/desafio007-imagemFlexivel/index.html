@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="icone/camera.ico" type="image/ico">
+	
+    <title>Imagem flexivel</title>
+</head>
+<body>
+	<h1>Você está vendo a imagem completa? Experimente ampliar o tamanho da sua janela para aproveitar a melhor experiencia &#x1F4F7;.</h1>
+	<!--na tag <img> insira a maior imagem e na tag <source> da menor para a maior no caso abaixo tamanho "medio" -->
+	<picture>
+		<source media="(max-width: 750px)" srcset="img/paisagem-p.png" type="image/png">
+		<source media="(max-width: 1050px)" srcset="img/paisagem-m.png" type="image/png">
+		<img src="img/paisagem-g.png" alt="Imagem flexivel">
+	</picture>
+
+</body>
+</html>

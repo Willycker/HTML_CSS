@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinamica</h1>
+    <p>tente abrir este site em <abbr title="(celular, tablet e no computador)">dispositivos</abbr> diferentes  ou  apenas aumente e diminua o tamanho da janela </p>
+
+    <picture>
+        <source media="(max-width: 750px )" srcset="imagem/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagem/foto-m.png" type="image/png">
+        <img src="imagem/foto-g.png" alt="imagem flexivel">
+    </picture>
+    
+    <h1> Reproduzindo audio</h1>
+    <p>vamos aprender a reproduzir audio em html5</p>
+    <!--Maneira simples-->
+   <!-- <audio src="midia/Beacon-Hill-Lights-Remix.mp3" controls autoplay></audio>-->
+
+   <audio preload="metadata" autoplay controls><!-- "loop" para quando encerrar o audio voltar ao inicio-->
+    <source src="midia/Beacon-Hill-Lights-Remix.mp3" type="audio/mpeg">
+    <source src="midia/Beacon-Hill-Lights-Remix.ogg" type="audio/ogg">
+    <source src="midia/Beacon-Hill-Lights-Remix.wav" type="audio/wav">
+   </audio>
+   <p>Seu navegador não consegue reproduzir o audio?</p>
+   <a href="midia/Beacon-Hill-Lights-Remix.mp3">Click aqui para download do audio</a>
+    
+
+
+
+
+
+</body>
+</html>
