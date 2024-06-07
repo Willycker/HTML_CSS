@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 400px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        tr.linha {
+            background-color: gray;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        td.dado {
+            background-color: yellow;
+            color: brown;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Primeira tabela</h1>
+
+    <!--
+        HIERARQUIA DE TABELAS (Simples)
+        TABLE = Tabela
+            TABLE ROW = linha da tabela
+            TABLE HEADER = Cabeçalho da tabela
+            TABLE DATA = Dado da tabela
+     -->
+
+    <table>
+        <tr><!--primeira linha-->
+            <td>A1
+            <td>B1
+            <td>C1
+        
+        <tr class="linha"><!--segunda linha-->
+            <td>A2
+            <td>B2
+            <td>C2
+        
+        <tr><!--terceira linha-->
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        <!--Em HTML5 não as tag tr e td não precisam de fechamento </>-->
+       
+        <tr><!--quarta linha-->
+            <td>A4</td>
+            <td class="dado">B4</td>
+            <td>C4</td>
+        </tr>
+    </table>
+</body>
+</html>
