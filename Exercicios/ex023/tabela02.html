@@ -12,6 +12,15 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+            border: 1px solid rgba(0, 0, 0, 0.527);
         }
 
         td, th {
@@ -24,6 +33,16 @@
             color: white;
         }
 
+        thead > tr > th { /*Cabeçalho fixo*/
+            position: sticky;
+            top: 1px;
+            background-color: gray;
+        }
+
+        tbody > tr:nth-child(even) { /* odd= impar, even= par ou 2n-1= impar, 2n= par*/
+            background-color: lightgrey;
+        }
+
         tfoot > tr > td.num {
             color: greenyellow;
         }
@@ -34,21 +53,26 @@
     </style>
 </head>
 <body>
-    <h1>uso de tabelas grandes</h1>
+    <h1>Uso de tabelas grandes</h1>
     <!-- anatomia para tabelas grandes
     TABLE
+        CAPTION
         THEAD
             TR, TD, TH
         TBODY
             TR, TD, TH
         TFOOT
             TR, TD, TH
+
+            titulo = th
+            dado = td
     -->
     <table>
+        <caption><strong>População das unidades Federativas</strong></caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -150,11 +174,11 @@
             </tr>
             <tr>
                 <td>Acre</td>
-                <td class="num">830 018	733</td>
+                <td class="num">790 101</td>
             </tr>
             <tr>
                 <td>Amapá</td>
-                <td class="num">733 759	669</td>
+                <td class="num">751 000</td>
             </tr>
             <tr>
                 <td>Roraima</td>
@@ -163,8 +187,8 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
-                <td class="num"><strong>175 719 6937</strong></td>
+                <th scope="row">Total de habitantes</th>
+                <td class="num"><strong>202 429 329</strong></td>
             </tr>
         </tfoot>
 
