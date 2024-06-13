@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio tabelas cap 21</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 600px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        th {
+            background-color: rgba(156, 152, 152, 0.993);
+            color: white;
+            font-weight: bold;
+        }
+
+        th.esquerda {
+            text-align: left;            
+        }
+
+        th.cor {
+            background-color: white;
+            color: black;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        td.disciplina {
+            text-align: left;
+        }
+
+        td.total{
+            background-color: rgba(156, 152, 152, 0.993);
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2" scope="col">Área</th>
+                <th rowspan="2" scope="col">Disciplina</th>
+                <th colspan="2" scope="colgroup">Notas</th>
+                <th rowspan="2" scope="col">Média</th>
+           </tr>
+           <tr>
+            <th scope="col">Nota 1</th>
+            <th scope="col">Nota 2</th>
+           </tr>
+        </thead>
+        <tfoot>
+            <th colspan="4" scope="col" class="esquerda">Média de Humanas</th>
+            <td class="total">0.0</td>
+        </tfoot>
+        <tbody>
+            <tr>
+                <th rowspan="4" scope="rowgroup" class="cor">Exatas</th>
+                <td class="disciplina">Matemática</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td class="disciplina">Fisica</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td class="disciplina">Quimica</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td class="disciplina">Biologia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <th colspan="4" scope="row" class="esquerda">Média de Exatas</th>
+                <td class="total">0.0</td>
+            </tr>
+            <tr>
+                <th rowspan="3" scope="rowgroup" class="cor">Humanas</th>
+                <td class="disciplina">Historia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td class="disciplina">Geografia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>            
+        </tbody>
+    </table>
+</body>
+</html>
